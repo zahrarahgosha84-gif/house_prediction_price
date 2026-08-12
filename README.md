@@ -47,9 +47,14 @@ Want to actually drag and rotate it yourself? Download [`assets/interactive_3d_c
 
 ## The part that made this interesting   
 
-I spent more time debugging than training models. Early on, plain linear regression gave an R² of basically zero — no signal at all. After a few hours of digging, I found 4 rows where the `Area` value had accidentally been copied from the `Price` column (a several-billion-square-meter "house"!). Dropping those 4 rows took R² from zero to 0.88 instantly.
 
-Then the neural net had its own drama: the second version trained for 3000 epochs and quietly overfit after epoch 1800 — test loss jumped from 0.18 to over 10. Fixed it with a manual early-stopping loop that snapshots the model weights every time test loss improves.
+Honestly, I spent more time debugging than actually training the models.
+
+At first, the linear regression model was giving me an R² close to zero, which made me think there was barely any useful signal in the data. After digging through the dataset, I found 4 weird rows where the "Area" value had somehow been copied from the "Price" column. So basically, the dataset had a "house" with an area of several billion square meters.
+
+I removed those 4 rows and the R² jumped from almost 0 to 0.88. That was probably the most interesting part of the project for me — the problem wasn't the model, it was the data.
+
+The neural network had another issue. My second version was trained for 3000 epochs, but it started overfitting around epoch 1800. The test loss went from about 0.18 to over 10. I ended up writing a simple manual early-stopping loop that saved the model weights whenever the test loss improved. This way, I could keep the best version of the model instead of the final, overfitted one.
 
 ## Neural net architecture (best version)
 
