@@ -30,6 +30,20 @@ A house price prediction model for Tehran, built on real Divar listing data (are
 
 10 models compared in total, from plain linear regression up to a custom neural net. Full breakdown is in the notebook.
 
+<div align="center">
+<img src="assets/model_comparison.png" width="750">
+</div>
+
+## Exploring the data in 3D
+
+Area, number of rooms, and price, all in one plot — color shows price.
+
+<div align="center">
+<img src="assets/rotating_3d_scatter.gif" width="480">
+</div>
+
+Want to actually drag and rotate it yourself? Download [`assets/interactive_3d_chart.html`](assets/interactive_3d_chart.html) and open it in your browser (GitHub can't run interactive charts inline, but this file is fully interactive locally).
+
 ## The part that made this interesting
 
 I spent more time debugging than training models. Early on, plain linear regression gave an R² of basically zero — no signal at all. After a few hours of digging, I found 4 rows where the `Area` value had accidentally been copied from the `Price` column (a several-billion-square-meter "house"!). Dropping those 4 rows took R² from zero to 0.88 instantly.
@@ -56,21 +70,29 @@ Input (103 features)
 
 A bilingual (Persian/English) Streamlit app — enter the area, rooms, amenities and neighborhood, get a predicted price back instantly.
 
+<div align="center">
+<img src="assets/webapp_screenshot.png" width="500">
+</div>
+
 ## Project structure
 
 ```
 📦 house-price-prediction
 ├── data/
-│   └── tehranhouses.csv      # raw dataset
-├── sample.ipynb              # full analysis, modeling, and training
-├── app.py                    # Streamlit web app
-├── house_price_model.pth     # trained neural net weights
-├── scaler.pkl                # StandardScaler used in preprocessing
-├── feature_columns.pkl       # exact feature order the model expects
+│   └── tehranhouses.csv         # raw dataset
+├── sample.ipynb                 # full analysis, modeling, and training
+├── app.py                       # Streamlit web app
+├── house_price_model.pth        # trained neural net weights
+├── scaler.pkl                   # StandardScaler used in preprocessing
+├── feature_columns.pkl          # exact feature order the model expects
 ├── requirements.txt
 ├── assets/
-│   └── house_animation.gif
-└── README.md                  # you're reading it
+│   ├── house_animation.gif
+│   ├── model_comparison.png
+│   ├── rotating_3d_scatter.gif
+│   ├── interactive_3d_chart.html
+│   └── webapp_screenshot.png
+└── README.md                     # you're reading it
 ```
 
 ## Running it
@@ -93,4 +115,5 @@ Live train/test loss curves for both neural net versions:
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:6C63FF&height=100&section=footer)
 
+</div>
 </div>
