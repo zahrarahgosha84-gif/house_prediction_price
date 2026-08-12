@@ -2,7 +2,6 @@
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,100:00C9A7&height=200&section=header&text=Tehran%20House%20Price%20Prediction&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Predicting%20real%20estate%20prices%20with%20classic%20ML%20%2B%20Deep%20Learning&descAlignY=58&descSize=16)
 
-<img src="assets/house_animation.gif" width="260">
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=Trained+8+classical+ML+models+with+GridSearchCV;Built+2+Neural+Nets+from+scratch+in+PyTorch;Tracked+everything+with+Weights+%26+Biases;Shipped+a+bilingual+Streamlit+app+%F0%9F%9A%80)](https://git.io/typing-svg)
 
