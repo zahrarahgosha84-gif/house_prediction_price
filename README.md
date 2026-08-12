@@ -45,7 +45,7 @@ Area, number of rooms, and price, all in one plot — color shows price.
 
 Want to actually drag and rotate it yourself? Download [`assets/interactive_3d_chart.html`](assets/interactive_3d_chart.html) and open it in your browser (GitHub can't run interactive charts inline, but this file is fully interactive locally).
 
-## The part that made this interesting
+## The part that made this interesting   <img src="assets/Belovedhome.gif" width="300">
 
 I spent more time debugging than training models. Early on, plain linear regression gave an R² of basically zero — no signal at all. After a few hours of digging, I found 4 rows where the `Area` value had accidentally been copied from the `Price` column (a several-billion-square-meter "house"!). Dropping those 4 rows took R² from zero to 0.88 instantly.
 
