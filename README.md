@@ -18,8 +18,7 @@
 ## What this is
 
 
-A house price prediction model for Tehran, built on real Divar listing data (area, rooms, amenities, neighborhood). It started as a teaching notebook with a handful of classic ML models; I took it further — found and fixed a nasty bug hiding in the raw data, wrote two neural nets from scratch in PyTorch, tracked training with Weights & Biases, and shipped a bilingual web app that actually works.
-<img src="assets/house_animation.gif" width="300">
+A house price prediction model for Tehran, built on real Divar listing data (area, rooms, amenities, neighborhood). It started as a teaching notebook with a handful of classic ML models; I took it further — found and fixed a nasty bug hiding in the raw data, wrote two neural nets from scratch in PyTorch, tracked training with Weights & Biases, and shipped a bilingual web app that actually works.<img src="assets/house_animation.gif" width="300">
 
 ## Results at a glance
 
