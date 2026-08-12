@@ -113,8 +113,8 @@ Live train/test loss curves for both neural net versions:
 ---
 
 <div align="center">
-
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:6C63FF&height=100&section=footer)
 <img src="assets/Belovedhome.gif" width="200">
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:6C63FF&height=100&section=footer)
+
 </div>
 </div>
